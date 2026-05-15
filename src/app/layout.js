@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Admin Dashboard",
+  title: "Field Project",
   description: "Sistema de gestión de usuarios y proyectos",
 };
 
