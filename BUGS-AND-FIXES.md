@@ -11,3 +11,4 @@
 # 29-05
 
 - [ ] **Resolver sistema de drag and drop**
+- [ ] **Añadir columna sin necesidad de refrescar la página**
