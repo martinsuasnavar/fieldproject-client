@@ -327,14 +327,22 @@ export default function SelectedBoard() {
   // EFFECTS
   // =========================
 
-  useEffect(() => {
+ useEffect(() => {
     fetchBoard();
-    fetchBoardPermission();
-  }, [boardEnvironment]);
-  // Initial fetch
+    fetchColumns();
+  }, []);
+
   useEffect(() => {
-    fetchColumns(); // Fetch columns here initially
-  }, [columns]);
+    if (boardEnvironment) {
+      fetchParentProject();
+    }
+  }, [boardEnvironment]);
+
+  useEffect(() => {
+    if (parentProject) {
+      fetchBoardPermission();
+    }
+  }, [parentProject]);
 
   // =========================
   // RENDER
