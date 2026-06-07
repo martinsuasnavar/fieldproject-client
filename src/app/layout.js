@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Field Project",
+  title: "Kanban Manager",
   description: "Sistema de gestión de usuarios y proyectos",
 };
 

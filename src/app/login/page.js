@@ -86,7 +86,7 @@ export default function Login() {
     /* Main Container: Pure Black Background */
     <div className="font-sans min-h-screen flex items-center justify-center bg-black text-white">
       <main className="w-full max-w-md p-4">
-        
+        <div className="flex align-center justify-center mb-4"><Image src="/logo-white.png" alt="application logo"  width={350} height={350}></Image></div>
         {/* Login Card: Dark Gray with a slight border */}
         <div className="bg-zinc-900 rounded-2xl shadow-2xl p-10 border border-zinc-800">
           <h1 className="text-3xl text-center font-bold mb-2">
@@ -105,7 +105,7 @@ export default function Login() {
             )}
 
             <div>
-              <label className="block text-xs uppercase tracking-widest font-semibold mb-2 text-zinc-500">
+              <label className="block text-xs uppercase tracking-widest font-semibold mb-2 text-zinc-200">
                 Usuario / Correo
               </label>
               <Input
@@ -118,7 +118,7 @@ export default function Login() {
             </div>
 
             <div>
-              <label className="block text-xs uppercase tracking-widest font-semibold mb-2 text-zinc-500">
+              <label className="block text-xs uppercase tracking-widest font-semibold mb-2 text-zinc-200">
                 Contraseña
               </label>
               <Input
@@ -143,7 +143,7 @@ export default function Login() {
             <div className="text-center pt-2">
               <a
                 href="/signup"
-                className="text-sm text-zinc-500 hover:text-white transition-colors"
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 ¿No tienes cuenta? <span className="text-blue-400 font-medium">Regístrate</span>
               </a>

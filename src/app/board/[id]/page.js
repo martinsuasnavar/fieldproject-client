@@ -125,9 +125,20 @@ export default function SelectedBoard() {
 
           const tasks = await taskResponse.json();
 
+          // 🛡️ FRONT-END GUARD: Filter out tasks with duplicate IDs
+          const seenTaskIds = new Set();
+          const uniqueTasks = tasks.filter((task) => {
+            if (seenTaskIds.has(task.task_id)) {
+              console.warn(`Deduplicated task with ID: ${task.task_id} in column ${column.column_id}`);
+              return false; // Skip this duplicate task
+            }
+            seenTaskIds.add(task.task_id);
+            return true; // Keep this task
+          });
+
           return {
             ...column,
-            tasks,
+            tasks: uniqueTasks, // ✅ Store only unique tasks
           };
         })
       );
@@ -339,6 +350,8 @@ export default function SelectedBoard() {
     if (boardEnvironment) {
       fetchParentProject();
     }
+        fetchBoard();
+    fetchColumns();
   }, [boardEnvironment]);
 
   useEffect(() => {

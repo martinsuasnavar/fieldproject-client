@@ -49,7 +49,6 @@ export default function BoardColumn({
         }
       );
 
-      window.location.reload();
     } catch (error) {
       console.error(
         "Error creando tarea:",
@@ -113,7 +112,6 @@ export default function BoardColumn({
         "DELETE"
       );
 
-      window.location.reload();
     } catch (error) {
       console.error(
         "Error eliminando columna:",
