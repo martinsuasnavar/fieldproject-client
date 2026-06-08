@@ -65,6 +65,7 @@ export default function UserBoardsAccess() {
   }, []);
 
   useEffect(() => {
+    console.log("user name is " + loggedUserName.value)
     if (loggedUserName.value=="no_user_found") {
       router.push("/login");
       return;
