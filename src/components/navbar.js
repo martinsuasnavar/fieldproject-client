@@ -32,7 +32,7 @@ export default function Navbar() {
     Cookies.remove("session_key");
     loggedIn.value = false;
     loggedUserId.value = 0;
-    loggedUserName.value = "";
+    loggedUserName.value = "user_not_found";
     router.push("/login");
   };
 
